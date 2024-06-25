@@ -1,38 +1,49 @@
+/* Import Tailwind base styles */
+@import "tailwindcss/base";
+
+/* Import Tailwind component styles */
+@import "tailwindcss/components";
+
+/* Import Tailwind utility styles */
+@import "tailwindcss/utilities";
+
+/* Custom global styles */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark .App {
+  background-color: #1a202c; /* Tailwind's bg-gray-900 */
+  color: #e2e8f0; /* Tailwind's text-gray-300 */
+}
+
 .App {
-  text-align: center;
+  background-color: #ffffff; /* Tailwind's bg-white */
+  color: #1a202c; /* Tailwind's text-gray-900 */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Custom component styles */
+.navbar {
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dark .navbar {
+  background-color: #2d3748; /* Tailwind's bg-gray-800 */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-link {
+  transition: color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.dark .nav-link {
+  color: #a0aec0; /* Tailwind's text-gray-400 */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark button {
+  background-color: #4a5568; /* Tailwind's bg-gray-700 */
+  color: #e2e8f0; /* Tailwind's text-gray-300 */
 }
